@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     // 跳到下个页面
     private void goNextPage() {
         TextView tv_hello = findViewById(R.id.tv_hello);
-        tv_hello.setText("3秒后进入下个页面");
+        tv_hello.setText("欢迎学习Android，3秒后进入下个页面");
 // 延迟3秒（3000毫秒）后启动任务mGoNext
         new Handler(Looper.myLooper()).postDelayed(mGoNext, 3000);
     }

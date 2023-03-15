@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">AndroidLearning</string>
+    <string name="app_author">wfql</string>
+    <string name="first_short">first</string>
+    <string name="first_long">入门学习</string>
+    <string name="second_short">second</string>
+    <string name="second_long">数据传输</string>
 </resources>

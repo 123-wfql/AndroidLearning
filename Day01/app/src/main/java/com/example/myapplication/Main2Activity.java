@@ -42,6 +42,9 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         Button btn_xml = findViewById(R.id.btn_xml);
         Button btn_bigger = findViewById(R.id.btn_random);
         Button btn_backtomain = findViewById(R.id.btn_backtomain);
+        Button btn_jumpActivity2 = findViewById(R.id.btn_jumpActivity2);
+        Button btn_jumpActivity3 = findViewById(R.id.btn_jumpActivity3);
+        Button btn_jumpActivity4 = findViewById(R.id.btn_jumpActivity4);
 
         btn_one.setOnClickListener(new MyOnClickListener());
         btn_two.setOnClickListener(this);
@@ -50,6 +53,9 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         btn_able.setOnClickListener(this);
         btn_bigger.setOnClickListener(this);
         btn_backtomain.setOnClickListener(this);
+        btn_jumpActivity2.setOnClickListener(this);
+        btn_jumpActivity3.setOnClickListener(this);
+        btn_jumpActivity4.setOnClickListener(this);
 
 
 
@@ -72,18 +78,33 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                                 btn_able.setText("禁用");
                         }
                 } else if (v.getId() == R.id.btn_random){
-                        Button btn_bigger = findViewById(R.id.btn_random);
                         ImageView iv_random = findViewById(R.id.iv_random);
                         Random random = new Random();
                         int index = random.nextInt(7);
                         iv_random.setImageResource(mArray[index]);
                 } else if (v.getId() == R.id.btn_backtomain) {
-                        startActivity(new Intent(this, MainActivity.class));
+                        //startActivity(new Intent(this, MainActivity.class));
+                        finish();
+                } else if (v.getId() == R.id.btn_jumpActivity3) {
+                        Intent intent = new Intent(this, Main3Activity.class);
+                        //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                        startActivity(intent);
+                } else if (v.getId() == R.id.btn_jumpActivity2) {
+                        Intent intent = new Intent(this, Main2Activity.class);
+                        //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK |
+                                        //Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(intent);
+                } else if (v.getId() == R.id.btn_jumpActivity4) {
+                        Intent intent = new Intent(this, MainActivity4.class);
+                        //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
                 } else {
                         String desc = String.format("页面监听点击了按钮：%s",  ((Button) v).getText());
                         tv_hello.setText(desc);
                 }
-
 
         }
 

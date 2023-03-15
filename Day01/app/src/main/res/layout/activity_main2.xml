@@ -83,6 +83,25 @@
             android:layout_height="48dp"
             android:text="回到main" />
 
+        <Button
+            android:id="@+id/btn_jumpActivity2"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:text="跳到2" />
+
+        <Button
+            android:id="@+id/btn_jumpActivity3"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:text="跳到3" />
+
+        <Button
+            android:id="@+id/btn_jumpActivity4"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:text="跳到4" />
+
+
     </LinearLayout>
 
 
